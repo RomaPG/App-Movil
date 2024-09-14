@@ -25,3 +25,25 @@
 #container a {
   text-decoration: none;
 }
+
+.post-trabajos {
+  column-count: 2; /* Divide en 2 columnas */ 
+  column-gap: 10px; /* Espacio entre columnas */ 
+} 
+  
+.post { 
+  display: inline-block; /* Necesario para que funcione con column-count */ 
+  background-color: #f0f0f0; 
+  margin-bottom: 10px; /* Espacio entre posts verticalmente */ 
+  border-radius: 10px; 
+  overflow: hidden; 
+  width: 100%; /* Asegura que el post ocupe toda la columna */ 
+  box-sizing: border-box; 
+} 
+  
+.post img { 
+  width: 100%; 
+  height: auto; 
+  display: block; 
+  object-fit: cover; 
+}

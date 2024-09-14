@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Chats</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none">
+    <ion-item *ngFor="let chat of chats" (click)="openChat(chat)" class="chat-item">
+      <ion-avatar slot="start">
+        <ion-icon name="chatbubbles" color="primary" size="large"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ chat.title }}</h2>
+        <p>{{ chat.preview }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-modal [isOpen]="selectedChat !== null" (didDismiss)="closeChat()">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="closeChat()">Volver</ion-button>
+          </ion-buttons>
+          <ion-title>{{ selectedChat?.title }}</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-list lines="none">
+          <ion-item *ngFor="let message of selectedChat?.messages; let i = index"
+                    [class]="i % 2 === 0 ? 'received' : 'sent'">
+            <ion-label>
+              <p>{{ message }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+<!-- Toolbar Inferior (Barrita navegacion de abajo xd) -->
+<ion-footer>
+  <ion-toolbar>
+      <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="home" routerLink="/home">
+            <ion-icon name="home"></ion-icon>
+            Inicio
+          </ion-tab-button>
+          <ion-tab-button tab="chatbubbles" routerLink="/chats">
+            <ion-icon name="chatbubbles"></ion-icon>
+            Mensajes
+          </ion-tab-button>
+          <ion-tab-button tab="library" routerLink="/usuario">
+            <ion-icon name="person"></ion-icon>
+            Perfil
+          </ion-tab-button>
+          <ion-tab-button routerLink="/buscar" tab="search">
+            <ion-icon name="search"></ion-icon>
+            <ion-label>Buscar</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

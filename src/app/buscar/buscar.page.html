@@ -1,0 +1,180 @@
+<ion-content [fullscreen]="true">
+  <!-- Encabezado principal con título de la página -->
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Buscar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Menú lateral con categorías -->
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title class="TituloCategorias">Categorías</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!-- Botones para diferentes categorías -->
+        <ion-item routerLink="/categoria1">
+          <ion-icon slot="start" name="leaf"></ion-icon>
+          <ion-label>Naturaleza</ion-label>
+        </ion-item>
+        <ion-item routerLink="/categoria2">
+          <ion-icon slot="start" name="camera"></ion-icon>
+          <ion-label>Fotografos principiantes</ion-label>
+        </ion-item>
+        <ion-item routerLink="/categoria3">
+          <ion-icon slot="start" name="cloud"></ion-icon>
+          <ion-label>Cielo</ion-label>
+        </ion-item>
+        <ion-item routerLink="/categoria4">
+          <ion-icon slot="start" name="home"></ion-icon>
+          <ion-label>Ciudad</ion-label>
+        </ion-item>
+        <ion-item routerLink="/categoria5">
+          <ion-icon slot="start" name="star"></ion-icon>
+          <ion-label>Fotógrafos profesionales</ion-label>
+        </ion-item>
+        <!-- Añade más ítems aquí -->
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Contenido principal desplazable -->
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <!-- Barra de búsqueda -->
+        <ion-searchbar></ion-searchbar>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="5">
+            <ion-card>
+              <ion-img src="assets/img/auto 1.jpg"></ion-img>
+              <ion-card-header>
+                <ion-card-title>Javier Correa</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                Fotógrafo de autos deportivos
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+          <ion-col size="7">
+            <ion-card>
+              <ion-img src="assets/img/ciudad 1.jpg"></ion-img>
+              <ion-card-header>
+                <ion-card-title>Diego Salazar</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                Fotógrafo de ciudades y paisajes
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+          <ion-col size="6">
+            <ion-card>
+              <ion-img src="assets/img/luna1.jpg"></ion-img>
+              <ion-card-header>
+                <ion-card-title>Esteban Rojas</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                Fotógrafo de paisajismo nocturno
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+          <!-- Custom card con imagen que cubre toda la card -->
+          <ion-col size="6">
+            <div class="custom-card">
+              <ion-img src="assets/img/comida1.jpg"></ion-img>
+              <div class="overlay">
+                <h2>Trabajos inspirados en gastronomía internacional</h2>
+              </div>
+            </div>
+          </ion-col>
+
+          
+
+          <ion-col size="6">
+            <div class="custom-card">
+              <ion-img src="assets/img/monumento historico.jpg"></ion-img>
+              <div class="overlay">
+                <h2>Monumentos historicos</h2>
+              </div>
+            </div>
+          </ion-col>
+
+          <ion-col size="6">
+            <ion-card>
+              <ion-img src="assets/img/naturaleza 1.jpg"></ion-img>
+              <ion-card-header>
+                <ion-card-title>Carlos Villanueva</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                Fotógrafo de ciudades y paisajes
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+          <ion-col size="6">
+            <div class="custom-card">
+              <ion-img src="assets/img/retrato1.jpg"></ion-img>
+              <div class="overlay">
+                <h2>Diversos retratos de personas</h2>
+              </div>
+            </div>
+          </ion-col>
+
+          <ion-col size="6">
+            <ion-card>
+              <ion-img src="assets/img/deporte1.jpg"></ion-img>
+              <ion-card-header>
+                <ion-card-title>Sergio Perez</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                Fotógrafo de deportes
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+          
+        </ion-row>
+      </ion-grid>
+    </ion-content>
+  </div>
+</ion-content>
+
+<!-- Footer con pestañas de navegación -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home" routerLink="/home">
+          <ion-icon name="home"></ion-icon>
+          Inicio
+        </ion-tab-button>
+        <ion-tab-button tab="chatbubbles" routerLink="/chats">
+          <ion-icon name="chatbubbles"></ion-icon>
+          Mensajes
+        </ion-tab-button>
+        <ion-tab-button tab="library" routerLink="/usuario">
+          <ion-icon name="person"></ion-icon>
+          Perfil
+        </ion-tab-button>
+        <ion-tab-button routerLink="/buscar" tab="search">
+          <ion-icon name="search"></ion-icon>
+          <ion-label>Buscar</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

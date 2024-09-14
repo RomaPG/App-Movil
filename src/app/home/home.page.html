@@ -1,20 +1,71 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<!-- Toolbar Superior (Titulo de App) -->
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title>WorkMatch</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <app-historias></app-historias>
+
+  <div class="post-trabajos"> 
+    <div class="post"> 
+      <h3>User 1</h3>
+       <img src="assets/img/portafolio4.jpg" alt=""> 
+       <h6>Web Design</h6> 
+      </div> 
+      <div class="post"> 
+        <h3>User 2</h3> 
+        <img src="assets/img/portafolio5.jpg" alt=""> 
+        <h6>Web Design</h6> 
+      </div> 
+      <div class="post"> 
+        <h3>User 3</h3> 
+        <img src="assets/img/portafolio.jpg" alt=""> 
+        <h6>Web Design</h6> 
+      </div> 
+      <div class="post"> 
+        <h3>User 4</h3> 
+          <img src="assets/img/Portafolio1.jfif" alt=""> 
+          <h6>Web Design</h6> 
+        </div> 
+        <div class="post"> 
+          <h3>User 5</h3> 
+          <img src="assets/img/portafolio.jpg" alt=""> 
+          <h6>Web Design</h6> 
+        </div> <div class="post"> 
+          <h3>User 6</h3> 
+          <img src="assets/img/portafolio.jpg" alt=""> 
+          <h6>Web Design</h6> 
+        </div> 
+      </div>
 </ion-content>
+
+
+<!-- Toolbar Inferior (Barrita navegacion de abajo xd) -->
+<ion-footer>
+  <ion-toolbar>
+      <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="home" routerLink="/home">
+            <ion-icon name="home"></ion-icon>
+            Inicio
+          </ion-tab-button>
+          <ion-tab-button tab="chatbubbles" routerLink="/chats">
+            <ion-icon name="chatbubbles"></ion-icon>
+            Mensajes
+          </ion-tab-button>
+          <ion-tab-button tab="library" routerLink="/usuario">
+            <ion-icon name="person"></ion-icon>
+            Perfil
+          </ion-tab-button>
+          <ion-tab-button routerLink="/buscar" tab="search">
+            <ion-icon name="search"></ion-icon>
+            <ion-label>Buscar</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
+
+<!--  -->

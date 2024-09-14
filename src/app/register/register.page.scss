@@ -1,0 +1,42 @@
+.login-container, .register-container, .forgot-password-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    background-color: #121212;
+  }
+  
+  h1 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  ion-item {
+    --background: #1f1f1f;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+  
+  ion-input {
+    color: #fff;
+  }
+  
+  ion-label {
+    color: white;
+  }
+  
+  ion-button {
+    --background: black;
+    --color: #fff;
+    --border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  ion-button[fill="clear"] {
+    --color: white;
+    --border-radius: 8px;
+  }
+  

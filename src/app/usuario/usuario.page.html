@@ -1,0 +1,163 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- primera parte finish -->
+<ion-content>
+  <div class="first">
+    <ion-avatar id="avatar">
+      <img alt="foto perfil" src="assets/img/foto-perfil1.jpg" />
+    </ion-avatar>
+    <div id="userName">
+      <ion-label>Matias Fica</ion-label>
+    </div>
+    <div id="ocupacion">
+      <ion-label>Diseñador Grafico</ion-label>
+    </div>
+    <div id="location">
+      <ion-icon name="pin"></ion-icon>
+      <ion-label>Santiago, Ch</ion-label>
+    </div>
+    <div id="description">
+      <ion-label>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus praesentium temporibus animi quia, sint in minima. Omnis dolores impedit inventore!</ion-label>
+    </div>
+    <div id="buttons">
+      <ion-button expand="block" class="contact">Contactar</ion-button>
+      <ion-button expand="block" class="follow" fill="outline">Seguir</ion-button>
+    </div>
+  </div>
+<!-- primera parte finish -->
+<!-- segunda parte start -->
+  <div class="second">
+    <div id="proyectos">
+      <div><ion-label>124</ion-label></div>
+      <div><ion-label>Proyectos</ion-label></div>
+    </div>
+    <div id="seguidores">
+      <div><ion-label>12.800</ion-label></div>
+      <div><ion-label>Seguidores</ion-label></div>
+    </div>
+    <div id="seguidos">
+      <div><ion-label>800</ion-label></div>
+      <div><ion-label>Seguidos</ion-label></div>
+    </div>
+    <div id="colaboraciones">
+      <div><ion-icon name="briefcase"></ion-icon></div>
+      <div><ion-label>800</ion-label></div>
+      <div><ion-label>Colaboraciones</ion-label></div>
+    </div>
+    
+    <div class="habilidades">
+      <h2>habilidades</h2>
+      <div class="etiquetas"><ion-label>Diseño UX/UI</ion-label>
+      <ion-label>Interaction Design</ion-label>
+      <ion-label>Prototyping</ion-label>
+      <ion-label>User Research</ion-label>
+      <ion-label>Design Systems</ion-label></div>
+    </div>
+
+    <div class="contenido">
+      <ion-segment (ionChange)="cambiarContenido($event)">
+        <ion-segment-button value="trabajos">
+          <ion-label>Trabajos</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="colaboraciones">
+          <ion-label>Colaboraciones</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    
+      <!-- Mostrar Trabajos -->
+      <div *ngIf="contenidoActual === 'trabajos'" class="post-trabajos">
+        <div class="post">
+          <h3>First Design</h3>
+          <img src="assets/img/portafolio.jpg" alt="">
+          <h6>Web Design</h6>
+        </div>
+        <div class="post">
+          <h3>First Design</h3>
+          <img src="assets/img/portafolio3.png" alt="">
+          <h6>Web Design</h6>
+        </div>
+        <div class="post">
+          <h3>First Design</h3>
+          <img src="assets/img/portafolio.jpg" alt="">
+          <h6>Web Design</h6>
+        </div>
+        <div class="post">
+          <h3>First Design</h3>
+          <img src="assets/img/foto-perfil1.jpg" alt="">
+          <h6>Web Design</h6>
+        </div>
+        <div class="post">
+          <h3>First Design</h3>
+          <img src="assets/img/portafolio.jpg" alt="">
+          <h6>Web Design</h6>
+        </div>
+        <div class="post">
+          <h3>First Design</h3>
+          <img src="./assets/img/portafolio.jpg" alt="">
+          <h6>Web Design</h6>
+        </div>
+      </div>
+    
+      <!-- Mostrar Colaboraciones -->
+      <div *ngIf="contenidoActual === 'colaboraciones'" class="post-colaboraciones">
+        <div class="colaboracion">
+          <h3>Colaboración 1</h3>
+          <p>Descripción de la colaboración...</p>
+          <img src="assets/img/portafolio.jpg" alt="">
+        </div>
+        <div class="colaboracion">
+          <h3>Colaboración 1</h3>
+          <p>Descripción de la colaboración...</p>
+          <img src="assets/img/portafolio2.jpg" alt="">
+        </div>
+        <div class="colaboracion">
+          <h3>Colaboración 1</h3>
+          <p>Descripción de la colaboración...</p>
+          <img src="assets/img/portafolio3.png" alt="">
+        </div>
+        <div class="colaboracion">
+          <h3>Colaboración 1</h3>
+          <p>Descripción de la colaboración...</p>
+          <img src="/assets/img/foto-perfil1.jpg" alt="">
+        </div>
+        <div class="colaboracion">
+          <h3>Colaboración 1</h3>
+          <p>Descripción de la colaboración...</p>
+          <img src="assets/img/portafolio.jpg" alt="">
+        </div>
+        <!-- Otras colaboraciones... -->
+      </div>
+    </div>
+  </div>
+  <!-- segunda parte finish -->
+  <!-- footer start -->
+  
+</ion-content>
+<!-- Toolbar Inferior (Barrita navegacion de abajo xd) -->
+<ion-footer>
+  <ion-toolbar>
+      <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="home" routerLink="/home">
+            <ion-icon name="home"></ion-icon>
+            Inicio
+          </ion-tab-button>
+          <ion-tab-button tab="chatbubbles" routerLink="/chats">
+            <ion-icon name="chatbubbles"></ion-icon>
+            Mensajes
+          </ion-tab-button>
+          <ion-tab-button tab="library" routerLink="/usuario">
+            <ion-icon name="person"></ion-icon>
+            Perfil
+          </ion-tab-button>
+          <ion-tab-button routerLink="/buscar" tab="search">
+            <ion-icon name="search"></ion-icon>
+            <ion-label>Buscar</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
